@@ -179,7 +179,7 @@ def tulis_di_notepad(text):
 
 def buka_aplikasi(aplikasi):
     try:
-        subprocess.Popen(r"C:\Users\KOHAKU\OneDrive\Desktop\+[aplikasi]+.exe")  # Ganti 'aplikasi' dengan jalur atau nama file eksekutif aplikasi yang ingin Anda buka
+        subprocess.Popen([aplikasi])  # Ganti 'aplikasi' dengan jalur atau nama file eksekutif aplikasi yang ingin Anda buka
     except OSError as e:
         engine.say(f"Failed to open the application {aplikasi}")
         update_history_text(f"Gagal membuka aplikasi {aplikasi}: {e}")
